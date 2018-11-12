@@ -43,7 +43,7 @@ public class CheckoutPage extends LandingPage{
 
     public void selectCreditCardPaymentMethod() throws InterruptedException{
         syscoLabUIOgm.waitTillElementLoaded(chkCreditCardPaymentMethod,5000);
-        Thread.sleep(3000);
+        syscoLabUIOgm.sleepInMiliSeconds(4000);
         syscoLabUIOgm.click(chkCreditCardPaymentMethod);
     }
 
@@ -54,7 +54,7 @@ public class CheckoutPage extends LandingPage{
     }
 
     public void clickOnBillingAddressSameAsDeliveryAddressCheckBox(){
-
+        syscoLabUIOgm.sleepInMiliSeconds(5000);
         if(!syscoLabUIOgm.isSelected(chkBillingandDeliveryAddressIsTheSame)){
             syscoLabUIOgm.click(chkBillingandDeliveryAddressIsTheSame);
         }
@@ -120,5 +120,9 @@ public class CheckoutPage extends LandingPage{
     }
     public void clickOnContinue(){
         syscoLabUIOgm.click(btnContinue);
+    }
+
+    public void sleepPage(int milliSeconds){
+        syscoLabUIOgm.sleepInMiliSeconds(milliSeconds);
     }
 }

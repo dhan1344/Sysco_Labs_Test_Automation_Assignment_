@@ -18,15 +18,14 @@ public class Checkout {
         checkoutPage.enterPostCode(postcode);
         checkoutPage.enterStreetAddress(address);
         checkoutPage.enterTelephone(telephone);
-        Thread.sleep(5000);
+        checkoutPage.sleepPage(5000);
     }
 
     public static void selectCreditCardPayment() throws InterruptedException{
         checkoutPage.selectCreditCardPaymentMethod();
     }
 
-    public static void selectBillingAddressAsDeliveryAddress()throws InterruptedException{
-        Thread.sleep(3000);
+    public static void selectBillingAddressAsDeliveryAddress(){
         checkoutPage.clickOnBillingAddressSameAsDeliveryAddressCheckBox();
     }
 
